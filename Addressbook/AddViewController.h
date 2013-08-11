@@ -10,5 +10,5 @@
 #import "AppDelegate.h"
 #import "Person.h"
 @interface AddViewController : UIViewController
-@property (strong, nonatomic) Person *person;
+@property (strong, nonatomic) Person *addPerson;
 @end

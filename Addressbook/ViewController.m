@@ -147,9 +147,9 @@
 /////////////
         [people removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }else if (editingStyle==UITableViewCellEditingStyleInsert){
-        [people  insertObject:@"newPerson" atIndex:indexPath.row];
-        [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+   // }else if (editingStyle==UITableViewCellEditingStyleInsert){
+        //[people  insertObject:@"newPerson" atIndex:indexPath.row];
+       // [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
     }
 }
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{

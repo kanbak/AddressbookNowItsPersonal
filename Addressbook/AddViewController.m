@@ -22,7 +22,7 @@
 @end
 
 @implementation AddViewController
-@synthesize person;
+@synthesize addPerson;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,11 +48,11 @@
 - (IBAction)savePerson:(id)sender {
     NSManagedObjectContext *managedObjectContext=((AppDelegate*)[UIApplication sharedApplication].delegate).managedObjectContext;
     NSError *error;
-    person = [NSEntityDescription insertNewObjectForEntityForName: @"Person" inManagedObjectContext: managedObjectContext];
-    person.firstName=firstNameTextField.text;
-    person.lastName=lastNameTextField.text;
-    person.emailAddress=emailAddressTextField.text;
-    person.phoneNumber=phoneNumberTextField.text;
+    addPerson = [NSEntityDescription insertNewObjectForEntityForName: @"Person" inManagedObjectContext: managedObjectContext];
+    addPerson.firstName=firstNameTextField.text;
+    addPerson.lastName=lastNameTextField.text;
+    addPerson.emailAddress=emailAddressTextField.text;
+    addPerson.phoneNumber=phoneNumberTextField.text;
     
     if (![managedObjectContext save:&error]) {
         NSLog(@"Error:%@",error);
